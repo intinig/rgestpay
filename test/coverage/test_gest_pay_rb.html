@@ -1,0 +1,797 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+      <head>
+        <title>test_gest_pay.rb - C0 code coverage information</title>
+        <style type='text/css'>body { background-color: rgb(240, 240, 245); }</style>
+        <style type='text/css'>span.cross-ref-title {
+ font-size: 140%;
+}
+span.cross-ref a {
+ text-decoration: none;
+}
+span.cross-ref {
+ background-color:#f3f7fa;
+ border: 1px dashed #333;
+ margin: 1em;
+ padding: 0.5em;
+ overflow: hidden;
+}
+a.crossref-toggle {
+ text-decoration: none;
+}
+span.marked0 {
+ background-color: rgb(185, 210, 200);
+ display: block;
+}
+span.marked1 {
+ background-color: rgb(190, 215, 205);
+ display: block;
+}
+span.inferred0 {
+ background-color: rgb(175, 200, 200);
+ display: block;
+}
+span.inferred1 {
+ background-color: rgb(180, 205, 205);
+ display: block;
+}
+span.uncovered0 {
+ background-color: rgb(225, 110, 110);
+ display: block;
+}
+span.uncovered1 {
+ background-color: rgb(235, 120, 120);
+ display: block;
+}
+span.overview {
+ border-bottom: 8px solid black;
+}
+div.overview {
+ border-bottom: 8px solid black;
+}
+body {
+ font-family: verdana, arial, helvetica;
+}
+div.footer {
+ font-size: 68%;
+ margin-top: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 0.5em;
+}
+h5 {
+ margin-top: 0.5em;
+}
+.hidden {
+ display: none;
+}
+div.separator {
+ height: 10px;
+}
+/* Commented out for better readability, esp. on IE */
+/*
+table tr td, table tr th {
+ font-size: 68%;
+}
+td.value table tr td {
+ font-size: 11px;
+}
+*/
+table.percent_graph {
+ height: 12px;
+ border: #808080 1px solid;
+ empty-cells: show;
+}
+table.percent_graph td.covered {
+ height: 10px;
+ background: #00f000;
+}
+table.percent_graph td.uncovered {
+ height: 10px;
+ background: #e00000;
+}
+table.percent_graph td.NA {
+ height: 10px;
+ background: #eaeaea;
+}
+table.report {
+ border-collapse: collapse;
+ width: 100%;
+}
+table.report td.heading {
+ background: #dcecff;
+ border: #d0d0d0 1px solid;
+ font-weight: bold;
+ text-align: center;
+}
+table.report td.heading:hover {
+ background: #c0ffc0;
+}
+table.report td.text {
+ border: #d0d0d0 1px solid;
+}
+table.report td.value {
+ text-align: right;
+ border: #d0d0d0 1px solid;
+}
+table.report tr.light {
+ background-color: rgb(240, 240, 245);
+}
+table.report tr.dark {
+ background-color: rgb(230, 230, 235);
+}
+</style>
+        <script type='text/javascript'>
+// <![CDATA[
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make cross-references hidden by default
+  document.writeln( "<style type=\"text/css\">span.cross-ref { display: none }</style>" )
+  // ]]>
+</script>
+        <style type='text/css'>span.run0 {
+  background-color: rgb(178, 204, 255);
+  display: block;
+}
+span.run1 {
+  background-color: rgb(178, 206, 255);
+  display: block;
+}
+span.run2 {
+  background-color: rgb(178, 209, 255);
+  display: block;
+}
+span.run3 {
+  background-color: rgb(178, 211, 255);
+  display: block;
+}
+span.run4 {
+  background-color: rgb(178, 214, 255);
+  display: block;
+}
+span.run5 {
+  background-color: rgb(178, 218, 255);
+  display: block;
+}
+span.run6 {
+  background-color: rgb(178, 220, 255);
+  display: block;
+}
+span.run7 {
+  background-color: rgb(178, 223, 255);
+  display: block;
+}
+span.run8 {
+  background-color: rgb(178, 225, 255);
+  display: block;
+}
+span.run9 {
+  background-color: rgb(178, 228, 255);
+  display: block;
+}
+span.run10 {
+  background-color: rgb(178, 232, 255);
+  display: block;
+}
+span.run11 {
+  background-color: rgb(178, 234, 255);
+  display: block;
+}
+span.run12 {
+  background-color: rgb(178, 237, 255);
+  display: block;
+}
+span.run13 {
+  background-color: rgb(178, 239, 255);
+  display: block;
+}
+span.run14 {
+  background-color: rgb(178, 242, 255);
+  display: block;
+}
+span.run15 {
+  background-color: rgb(178, 246, 255);
+  display: block;
+}
+span.run16 {
+  background-color: rgb(178, 248, 255);
+  display: block;
+}
+span.run17 {
+  background-color: rgb(178, 251, 255);
+  display: block;
+}
+span.run18 {
+  background-color: rgb(178, 253, 255);
+  display: block;
+}
+span.run19 {
+  background-color: rgb(178, 255, 253);
+  display: block;
+}
+span.run20 {
+  background-color: rgb(178, 255, 249);
+  display: block;
+}
+span.run21 {
+  background-color: rgb(178, 255, 247);
+  display: block;
+}
+span.run22 {
+  background-color: rgb(178, 255, 244);
+  display: block;
+}
+span.run23 {
+  background-color: rgb(178, 255, 242);
+  display: block;
+}
+span.run24 {
+  background-color: rgb(178, 255, 239);
+  display: block;
+}
+span.run25 {
+  background-color: rgb(178, 255, 235);
+  display: block;
+}
+span.run26 {
+  background-color: rgb(178, 255, 233);
+  display: block;
+}
+span.run27 {
+  background-color: rgb(178, 255, 230);
+  display: block;
+}
+span.run28 {
+  background-color: rgb(178, 255, 228);
+  display: block;
+}
+span.run29 {
+  background-color: rgb(178, 255, 225);
+  display: block;
+}
+span.run30 {
+  background-color: rgb(178, 255, 221);
+  display: block;
+}
+span.run31 {
+  background-color: rgb(178, 255, 219);
+  display: block;
+}
+span.run32 {
+  background-color: rgb(178, 255, 216);
+  display: block;
+}
+span.run33 {
+  background-color: rgb(178, 255, 214);
+  display: block;
+}
+span.run34 {
+  background-color: rgb(178, 255, 211);
+  display: block;
+}
+span.run35 {
+  background-color: rgb(178, 255, 207);
+  display: block;
+}
+span.run36 {
+  background-color: rgb(178, 255, 205);
+  display: block;
+}
+span.run37 {
+  background-color: rgb(178, 255, 202);
+  display: block;
+}
+span.run38 {
+  background-color: rgb(178, 255, 200);
+  display: block;
+}
+span.run39 {
+  background-color: rgb(178, 255, 197);
+  display: block;
+}
+span.run40 {
+  background-color: rgb(178, 255, 193);
+  display: block;
+}
+span.run41 {
+  background-color: rgb(178, 255, 191);
+  display: block;
+}
+span.run42 {
+  background-color: rgb(178, 255, 188);
+  display: block;
+}
+span.run43 {
+  background-color: rgb(178, 255, 186);
+  display: block;
+}
+span.run44 {
+  background-color: rgb(178, 255, 183);
+  display: block;
+}
+span.run45 {
+  background-color: rgb(178, 255, 179);
+  display: block;
+}
+span.run46 {
+  background-color: rgb(179, 255, 178);
+  display: block;
+}
+span.run47 {
+  background-color: rgb(182, 255, 178);
+  display: block;
+}
+span.run48 {
+  background-color: rgb(184, 255, 178);
+  display: block;
+}
+span.run49 {
+  background-color: rgb(187, 255, 178);
+  display: block;
+}
+span.run50 {
+  background-color: rgb(191, 255, 178);
+  display: block;
+}
+span.run51 {
+  background-color: rgb(193, 255, 178);
+  display: block;
+}
+span.run52 {
+  background-color: rgb(196, 255, 178);
+  display: block;
+}
+span.run53 {
+  background-color: rgb(198, 255, 178);
+  display: block;
+}
+span.run54 {
+  background-color: rgb(201, 255, 178);
+  display: block;
+}
+span.run55 {
+  background-color: rgb(205, 255, 178);
+  display: block;
+}
+span.run56 {
+  background-color: rgb(207, 255, 178);
+  display: block;
+}
+span.run57 {
+  background-color: rgb(210, 255, 178);
+  display: block;
+}
+span.run58 {
+  background-color: rgb(212, 255, 178);
+  display: block;
+}
+span.run59 {
+  background-color: rgb(215, 255, 178);
+  display: block;
+}
+span.run60 {
+  background-color: rgb(219, 255, 178);
+  display: block;
+}
+span.run61 {
+  background-color: rgb(221, 255, 178);
+  display: block;
+}
+span.run62 {
+  background-color: rgb(224, 255, 178);
+  display: block;
+}
+span.run63 {
+  background-color: rgb(226, 255, 178);
+  display: block;
+}
+span.run64 {
+  background-color: rgb(229, 255, 178);
+  display: block;
+}
+span.run65 {
+  background-color: rgb(233, 255, 178);
+  display: block;
+}
+span.run66 {
+  background-color: rgb(235, 255, 178);
+  display: block;
+}
+span.run67 {
+  background-color: rgb(238, 255, 178);
+  display: block;
+}
+span.run68 {
+  background-color: rgb(240, 255, 178);
+  display: block;
+}
+span.run69 {
+  background-color: rgb(243, 255, 178);
+  display: block;
+}
+span.run70 {
+  background-color: rgb(247, 255, 178);
+  display: block;
+}
+span.run71 {
+  background-color: rgb(249, 255, 178);
+  display: block;
+}
+span.run72 {
+  background-color: rgb(252, 255, 178);
+  display: block;
+}
+span.run73 {
+  background-color: rgb(255, 255, 178);
+  display: block;
+}
+span.run74 {
+  background-color: rgb(255, 252, 178);
+  display: block;
+}
+span.run75 {
+  background-color: rgb(255, 248, 178);
+  display: block;
+}
+span.run76 {
+  background-color: rgb(255, 246, 178);
+  display: block;
+}
+span.run77 {
+  background-color: rgb(255, 243, 178);
+  display: block;
+}
+span.run78 {
+  background-color: rgb(255, 240, 178);
+  display: block;
+}
+span.run79 {
+  background-color: rgb(255, 238, 178);
+  display: block;
+}
+span.run80 {
+  background-color: rgb(255, 234, 178);
+  display: block;
+}
+span.run81 {
+  background-color: rgb(255, 232, 178);
+  display: block;
+}
+span.run82 {
+  background-color: rgb(255, 229, 178);
+  display: block;
+}
+span.run83 {
+  background-color: rgb(255, 226, 178);
+  display: block;
+}
+span.run84 {
+  background-color: rgb(255, 224, 178);
+  display: block;
+}
+span.run85 {
+  background-color: rgb(255, 220, 178);
+  display: block;
+}
+span.run86 {
+  background-color: rgb(255, 218, 178);
+  display: block;
+}
+span.run87 {
+  background-color: rgb(255, 215, 178);
+  display: block;
+}
+span.run88 {
+  background-color: rgb(255, 212, 178);
+  display: block;
+}
+span.run89 {
+  background-color: rgb(255, 210, 178);
+  display: block;
+}
+span.run90 {
+  background-color: rgb(255, 206, 178);
+  display: block;
+}
+span.run91 {
+  background-color: rgb(255, 204, 178);
+  display: block;
+}
+span.run92 {
+  background-color: rgb(255, 201, 178);
+  display: block;
+}
+span.run93 {
+  background-color: rgb(255, 198, 178);
+  display: block;
+}
+span.run94 {
+  background-color: rgb(255, 196, 178);
+  display: block;
+}
+span.run95 {
+  background-color: rgb(255, 192, 178);
+  display: block;
+}
+span.run96 {
+  background-color: rgb(255, 189, 178);
+  display: block;
+}
+span.run97 {
+  background-color: rgb(255, 187, 178);
+  display: block;
+}
+span.run98 {
+  background-color: rgb(255, 184, 178);
+  display: block;
+}
+span.run99 {
+  background-color: rgb(255, 182, 178);
+  display: block;
+}
+span.run100 {
+  background-color: rgb(255, 178, 178);
+  display: block;
+}
+</style>
+      </head>
+      <body>
+        <h3>C0 code coverage information</h3>
+        <p>Generated on Sat Dec 23 12:40:45 CET 2006 with <a href='http://eigenclass.org/hiki.rb?rcov'>rcov 0.7.0</a>
+        </p>
+        <hr /><pre><span class='marked0'>Code reported as executed by Ruby looks like this...
+</span><span class='marked1'>and this: this line is also marked as covered.
+</span><span class='inferred0'>Lines considered as run by rcov, but not reported by Ruby, look like this,
+</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).
+</span><span class='uncovered0'>Finally, here&apos;s a line marked as not executed.
+</span></pre>                       
+    <table class='report'>
+      <thead>
+        <tr>
+          <td class='heading'>Name</td>
+          <td class='heading'>Total lines</td>
+          <td class='heading'>Lines of code</td>
+          <td class='heading'>Total coverage</td>
+          <td class='heading'>Code coverage</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='light'>
+          <td>
+            <a href='test_gest_pay_rb.html'>test_gest_pay.rb</a>
+          </td>
+          <td class='value'>
+            <tt>168</tt>
+          </td>
+          <td class='value'>
+            <tt>117</tt>
+          </td>
+          <td>
+            <table cellspacing='0' cellpadding='0' align='right'>
+              <tr>
+                <td>
+                  <tt>100.0%</tt>&nbsp;</td>
+                <td>
+                  <table cellspacing='0' class='percent_graph' cellpadding='0' width='100'>
+                    <tr>
+                      <td class='covered' width='100' />
+                      <td class='uncovered' width='0' />
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td>
+            <table cellspacing='0' cellpadding='0' align='right'>
+              <tr>
+                <td>
+                  <tt>100.0%</tt>&nbsp;</td>
+                <td>
+                  <table cellspacing='0' class='percent_graph' cellpadding='0' width='100'>
+                    <tr>
+                      <td class='covered' width='100' />
+                      <td class='uncovered' width='0' />
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table><pre><span class="inferred1"><a name="line1" />  1 # This file is part of RGestPay.
+</span><span class="inferred0"><a name="line2" />  2 #
+</span><span class="inferred1"><a name="line3" />  3 # RGestPay is a Ruby implementation of GestPayCryptHS the Java
+</span><span class="inferred0"><a name="line4" />  4 # class for GestPay payments.
+</span><span class="inferred1"><a name="line5" />  5 #
+</span><span class="inferred0"><a name="line6" />  6 # RGestPay Copyright (C)2006 by Giovanni Intini &lt;medlar@medlar.it&gt;
+</span><span class="inferred1"><a name="line7" />  7 # 
+</span><span class="inferred0"><a name="line8" />  8 # RGestPay is free software; you can redistribute it and/or modify
+</span><span class="inferred1"><a name="line9" />  9 # it under the terms of the GNU General Public License as published by
+</span><span class="inferred0"><a name="line10" /> 10 # the Free Software Foundation; either version 2 of the License, or
+</span><span class="inferred1"><a name="line11" /> 11 # (at your option) any later version.
+</span><span class="inferred0"><a name="line12" /> 12 # 
+</span><span class="inferred1"><a name="line13" /> 13 # RGestPay is distributed in the hope that it will be useful,
+</span><span class="inferred0"><a name="line14" /> 14 # but WITHOUT ANY WARRANTY; without even the implied warranty of
+</span><span class="inferred1"><a name="line15" /> 15 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+</span><span class="inferred0"><a name="line16" /> 16 # GNU General Public License for more details.
+</span><span class="inferred1"><a name="line17" /> 17 # 
+</span><span class="inferred0"><a name="line18" /> 18 # You should have received a copy of the GNU General Public License
+</span><span class="inferred1"><a name="line19" /> 19 # along with RGestPay; if not, write to the Free Software
+</span><span class="inferred0"><a name="line20" /> 20 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+</span><span class="inferred1"><a name="line21" /> 21 #
+</span><span class="inferred0"><a name="line22" /> 22 # Author: Giovanni Intini &lt;medlar@medlar.it&gt;
+</span><span class="inferred1"><a name="line23" /> 23 
+</span><span class="marked0"><a name="line24" /> 24 require '../lib/gest_pay'
+</span><span class="marked1"><a name="line25" /> 25 require 'test/unit'
+</span><span class="inferred0"><a name="line26" /> 26 
+</span><span class="marked1"><a name="line27" /> 27 class TestGestPay &lt; Test::Unit::TestCase
+</span><span class="marked0"><a name="line28" /> 28   def setup
+</span><span class="marked1"><a name="line29" /> 29     @t = GestPay::TransactionData.new
+</span><span class="marked0"><a name="line30" /> 30     @t[:currency] = 242
+</span><span class="marked1"><a name="line31" /> 31     @t[:amount] = 1
+</span><span class="marked0"><a name="line32" /> 32     @t[:shop_transaction_id] = 23434
+</span><span class="inferred1"><a name="line33" /> 33 
+</span><span class="marked0"><a name="line34" /> 34     @c = GestPay::CryptRequest.new(&quot;GESPAY35928&quot;)
+</span><span class="inferred1"><a name="line35" /> 35     
+</span><span class="inferred0"><a name="line36" /> 36     # Please change this string to a &quot;fresh&quot; string to decrypt, the server won't decrypt
+</span><span class="inferred1"><a name="line37" /> 37     # strings that get too old.
+</span><span class="marked0"><a name="line38" /> 38     @encrypted_string = &quot;703C404A28AA7E9F35CA9FD261889382FA76E535699F98E0C531537E41CDCD221115A745D39E6FC9EA95ED35E2670FDAEECEE84396340D81A942D8409B6AE9DF95B9B7E73CAB197221DA00B5F316F7A01CDF05B77D27F7B810F023B5C357094D973DAA791A416483E9D2F0ADBF9AA9AA56FF98ECA02257FE9CC4A410E4EE111F3051596011D818C9973DAA791A416483CAA61CD14DD098410C82BBE55075064E8B8AC03D06BA88A227AA73A72DBA0EDBBF89B63CEA4C501E10BCF46DD8158687ECC652B76875C514AB5284A0DC0A0A4A5F14E2D1250C7BA9BFED0B5970D5FE452B6D10C1AAB0664C6BC4D51F086686F5B6E030234BA4A8E854D005A518321BC51F61786A0F3028FAA066882F97F333EAB82596EAA95602385F102D0B418B9D88B6E98E6971E999B0A93349197AB89B18F3ADB462F51A68A8&quot;
+</span><span class="inferred1"><a name="line39" /> 39   end
+</span><span class="inferred0"><a name="line40" /> 40   
+</span><span class="marked1"><a name="line41" /> 41   def test_transaction_data_fetch_nil_attribute
+</span><span class="marked0"><a name="line42" /> 42     @t[:really_strange_attribute] = 3
+</span><span class="marked1"><a name="line43" /> 43     assert_nil @t[:really_strange_attribute]
+</span><span class="inferred0"><a name="line44" /> 44   end
+</span><span class="inferred1"><a name="line45" /> 45   
+</span><span class="marked0"><a name="line46" /> 46   def test_transaction_data_to_str
+</span><span class="marked1"><a name="line47" /> 47     assert_not_nil @t.to_str
+</span><span class="marked0"><a name="line48" /> 48   end
+</span><span class="inferred1"><a name="line49" /> 49   
+</span><span class="marked0"><a name="line50" /> 50   def test_transaction_data_ready_to_encrypt
+</span><span class="marked1"><a name="line51" /> 51     assert @t.ready_to_encrypt?
+</span><span class="marked0"><a name="line52" /> 52   end
+</span><span class="inferred1"><a name="line53" /> 53   
+</span><span class="marked0"><a name="line54" /> 54   def test_transaction_data_encrypt_error_553
+</span><span class="marked1"><a name="line55" /> 55     @t[:amount] = nil
+</span><span class="marked0"><a name="line56" /> 56     t = GestPay::TransactionData.new(@t.encrypt_error)
+</span><span class="marked1"><a name="line57" /> 57     assert_equal 553, t[:error_code]
+</span><span class="marked0"><a name="line58" /> 58     assert_equal &quot;amount not valid&quot;, t[:error_description]
+</span><span class="inferred1"><a name="line59" /> 59   end
+</span><span class="inferred0"><a name="line60" /> 60   
+</span><span class="marked1"><a name="line61" /> 61   def test_transaction_data_encrypt_error_551
+</span><span class="marked0"><a name="line62" /> 62     @t[:shop_transaction_id] = nil
+</span><span class="marked1"><a name="line63" /> 63     t = GestPay::TransactionData.new(@t.encrypt_error)
+</span><span class="marked0"><a name="line64" /> 64     assert_equal 551, t[:error_code]
+</span><span class="marked1"><a name="line65" /> 65     assert_equal &quot;shop_transaction_id not valid&quot;, t[:error_description]
+</span><span class="inferred0"><a name="line66" /> 66   end
+</span><span class="inferred1"><a name="line67" /> 67   
+</span><span class="marked0"><a name="line68" /> 68   def test_transaction_data_no_encrypt_errors
+</span><span class="marked1"><a name="line69" /> 69     t = GestPay::TransactionData.new(@t.encrypt_error)
+</span><span class="marked0"><a name="line70" /> 70     assert_nil t[:error_code]
+</span><span class="marked1"><a name="line71" /> 71     assert_nil t[:error_description]
+</span><span class="inferred0"><a name="line72" /> 72   end
+</span><span class="inferred1"><a name="line73" /> 73 
+</span><span class="marked0"><a name="line74" /> 74   def test_transaction_data_create_from_string
+</span><span class="marked1"><a name="line75" /> 75     t = GestPay::TransactionData.new &quot;PAY1_UICCODE=242*P1*PAY1_SHOPTRANSACTIONID=34314&quot;
+</span><span class="marked0"><a name="line76" /> 76     assert_equal &quot;242&quot;, t[:currency]
+</span><span class="marked1"><a name="line77" /> 77     assert_equal &quot;34314&quot;, t[:shop_transaction_id]
+</span><span class="inferred0"><a name="line78" /> 78   end
+</span><span class="inferred1"><a name="line79" /> 79   
+</span><span class="marked0"><a name="line80" /> 80   def test_transaction_data_create_from_string_with_custom_info
+</span><span class="marked1"><a name="line81" /> 81     t = GestPay::TransactionData.new &quot;PAY1_UICCODE=242*P1*PAY1_SHOPTRANSACTIONID=34314*P1*ENZO=34*P1*RENATO=ALFA&quot;
+</span><span class="marked0"><a name="line82" /> 82     assert_equal &quot;*P1*ENZO=34*P1*RENATO=ALFA&quot;, t[:custom_info]
+</span><span class="inferred1"><a name="line83" /> 83   end
+</span><span class="inferred0"><a name="line84" /> 84   
+</span><span class="marked1"><a name="line85" /> 85   def test_transaction_data_resets_error_code
+</span><span class="marked0"><a name="line86" /> 86     t = GestPay::TransactionData.new &quot;PAY1_UICCODE=242*P1*PAY1_SHOPTRANSACTIONID=34314*P1*PAY1_ERRORCODE=0&quot;
+</span><span class="marked1"><a name="line87" /> 87     assert_nil t[:error_code]
+</span><span class="inferred0"><a name="line88" /> 88   end
+</span><span class="inferred1"><a name="line89" /> 89 
+</span><span class="marked0"><a name="line90" /> 90   def test_crypt_request_crypt_url
+</span><span class="marked1"><a name="line91" /> 91     assert_equal &quot;?a=GESPAY35928&amp;b=mamma&amp;c=2.0&quot;, @c.send(:crypt_url, &quot;mamma&quot;)
+</span><span class="marked0"><a name="line92" /> 92   end
+</span><span class="inferred1"><a name="line93" /> 93   
+</span><span class="marked0"><a name="line94" /> 94   def test_crypt_request_encrypt_url
+</span><span class="marked1"><a name="line95" /> 95     assert_equal &quot;/CryptHTTPS/Encrypt.asp?a=GESPAY35928&amp;b=mamma&amp;c=2.0&quot;,
+</span><span class="marked0"><a name="line96" /> 96                  @c.send(:encrypt_url, &quot;mamma&quot;)
+</span><span class="marked1"><a name="line97" /> 97   end
+</span><span class="inferred0"><a name="line98" /> 98     
+</span><span class="marked1"><a name="line99" /> 99   def test_crypt_request_post_ssl
+</span><span class="marked0"><a name="line100" />100     assert_instance_of(Net::HTTPOK, @c.send(:post_ssl, @c.send(:encrypt_url, &quot;mamma&quot;)))
+</span><span class="marked1"><a name="line101" />101   end
+</span><span class="inferred0"><a name="line102" />102   
+</span><span class="marked1"><a name="line103" />103   def test_crypt_request_encrypt_returns_transaction_ok
+</span><span class="marked0"><a name="line104" />104     t = @c.encrypt(@t)
+</span><span class="marked1"><a name="line105" />105     assert_instance_of(GestPay::TransactionData, t)
+</span><span class="marked0"><a name="line106" />106     assert_nil t[:error_code]
+</span><span class="inferred1"><a name="line107" />107   end
+</span><span class="inferred0"><a name="line108" />108   
+</span><span class="marked1"><a name="line109" />109   def test_crypt_request_error_546
+</span><span class="marked0"><a name="line110" />110     @c.shop_login = &quot;&quot;
+</span><span class="marked1"><a name="line111" />111     t = @c.encrypt(@t)
+</span><span class="marked0"><a name="line112" />112     assert_equal &quot;shop_login not valid&quot;, t[:error_description]
+</span><span class="marked1"><a name="line113" />113     assert_equal 546, t[:error_code]
+</span><span class="inferred0"><a name="line114" />114   end
+</span><span class="inferred1"><a name="line115" />115   
+</span><span class="marked0"><a name="line116" />116   def test_crypt_request_other_errors
+</span><span class="marked1"><a name="line117" />117     @t[:currency] = nil
+</span><span class="marked0"><a name="line118" />118     t = @c.encrypt(@t)
+</span><span class="marked1"><a name="line119" />119     assert_not_nil t[:error_description]
+</span><span class="inferred0"><a name="line120" />120   end
+</span><span class="inferred1"><a name="line121" />121   
+</span><span class="marked0"><a name="line122" />122   def test_crypt_request_error_9999
+</span><span class="marked1"><a name="line123" />123     @c.shop_login = nil
+</span><span class="marked0"><a name="line124" />124     t = @c.encrypt(@t)
+</span><span class="marked1"><a name="line125" />125     assert_equal &quot;Connection Error&quot;, t[:error_description]
+</span><span class="marked0"><a name="line126" />126     assert_equal 9999, t[:error_code]
+</span><span class="inferred1"><a name="line127" />127   end
+</span><span class="inferred0"><a name="line128" />128   
+</span><span class="marked1"><a name="line129" />129   def test_crypt_request_error_response
+</span><span class="marked0"><a name="line130" />130     @t[:exp_month] = 9
+</span><span class="marked1"><a name="line131" />131     t = @c.encrypt(@t)
+</span><span class="marked0"><a name="line132" />132     assert_equal 1107, t[:error_code]
+</span><span class="marked1"><a name="line133" />133     assert_equal &quot;Unexpected parameter name. Please double check Fields and Parameters configuration in Back Office.&quot;, t[:error_description]
+</span><span class="inferred0"><a name="line134" />134   end
+</span><span class="inferred1"><a name="line135" />135   
+</span><span class="marked0"><a name="line136" />136   def test_crypt_request_decrypt_url
+</span><span class="marked1"><a name="line137" />137     assert_equal &quot;/CryptHTTPS/Decrypt.asp?a=GESPAY35928&amp;b=mamma&amp;c=2.0&quot;,
+</span><span class="marked0"><a name="line138" />138                  @c.send(:decrypt_url, &quot;mamma&quot;)
+</span><span class="marked1"><a name="line139" />139   end
+</span><span class="inferred0"><a name="line140" />140   
+</span><span class="marked1"><a name="line141" />141   def test_crypt_request_decrypt_returns_transaction_ok
+</span><span class="marked0"><a name="line142" />142     t = @c.decrypt(@encrypted_string)
+</span><span class="marked1"><a name="line143" />143     assert_instance_of(GestPay::TransactionData, t)
+</span><span class="marked0"><a name="line144" />144     assert_nil t[:error_description]
+</span><span class="marked1"><a name="line145" />145     assert_nil t[:error_code]
+</span><span class="inferred0"><a name="line146" />146   end
+</span><span class="inferred1"><a name="line147" />147   
+</span><span class="marked0"><a name="line148" />148   def test_crypt_request_decrypt_error
+</span><span class="marked1"><a name="line149" />149     t = @c.decrypt(&quot;william&quot;)
+</span><span class="marked0"><a name="line150" />150     assert_equal &quot;System Error&quot;, t[:error_description]
+</span><span class="marked1"><a name="line151" />151     assert_equal 9999, t[:error_code]
+</span><span class="inferred0"><a name="line152" />152   end
+</span><span class="inferred1"><a name="line153" />153   
+</span><span class="marked0"><a name="line154" />154   def test_decrypt_request_error_546
+</span><span class="marked1"><a name="line155" />155     @c.shop_login = &quot;&quot;
+</span><span class="marked0"><a name="line156" />156     t = @c.decrypt(@encrypted_string)
+</span><span class="marked1"><a name="line157" />157     assert_instance_of(GestPay::TransactionData, t)
+</span><span class="marked0"><a name="line158" />158     assert_equal &quot;shop_login not valid&quot;, t[:error_description]
+</span><span class="marked1"><a name="line159" />159     assert_equal 546, t[:error_code]
+</span><span class="inferred0"><a name="line160" />160   end
+</span><span class="inferred1"><a name="line161" />161   
+</span><span class="marked0"><a name="line162" />162   def test_decrypt_request_error_1009
+</span><span class="marked1"><a name="line163" />163     t = @c.decrypt(&quot;&quot;)
+</span><span class="marked0"><a name="line164" />164     assert_equal &quot;String to Decrypt not valid&quot;, t[:error_description]
+</span><span class="marked1"><a name="line165" />165     assert_equal 1009, t[:error_code]
+</span><span class="inferred0"><a name="line166" />166   end
+</span><span class="inferred1"><a name="line167" />167   
+</span><span class="inferred0"><a name="line168" />168 end
+</span></pre><hr />    <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a> version 0.7.0.</p><p>
+          <a href='http://validator.w3.org/check/referer'>
+            <img src='http://www.w3.org/Icons/valid-xhtml10' height='31' alt='Valid XHTML 1.0!' width='88' />
+          </a>
+          <a href='http://jigsaw.w3.org/css-validator/check/referer'>
+            <img src='http://jigsaw.w3.org/css-validator/images/vcss' alt='Valid CSS!' style='border:0;width:88px;height:31px' />
+          </a>
+        </p>
+      </body>
+    </html>

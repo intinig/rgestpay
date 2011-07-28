@@ -1,0 +1,31 @@
+RGESTPAY
+========
+
+RGestPay is the ruby port of GestPayCryptHS, the Java class released by 
+EasyNolo to help implement the GestPay payment gateway.
+
+USAGE
+=====
+
+require 'gest_pay'
+
+c = GestPay::CryptRequest.new(your_shop_login)
+t = GestPay::TransactionData.new(
+      :amount => 1.34  # In Euro
+      :currency => 242 # It means Euro, check the GestPay manual for other codes
+      :shop_transaction_id => "something"
+    )
+    
+# Get the first encryption
+t = c.encrypt(t)
+# Check for errors
+unless t.[:error_code].nil?
+  raise "ERROR"
+end
+# Now you have the encrypted data
+puts t[:encrypted_str] # => "VERY LONG STRING"
+
+# After you redirect the user to the payment server using t[:encrypted_string] as the "b"
+# parameter, you get back an encrypted string from the server
+t = c.decrypt("string I got from the server")
+puts t[:transaction_result] # => "OK"
